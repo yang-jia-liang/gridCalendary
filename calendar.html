@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        :root {
+            --primary: #d1ffe6;
+            --error: #ffd6d1;
+            --warn: #fafaa3;
+            --info: #e2f8ff;
+        }
+
+        .primary {
+            background: var(--primary);
+        }
+        .error {
+            background: var(--error);
+        }
+        .warn {
+            background: var(--warn);
+        }
+        .info {
+            background: var(--info);
+        }
+
+        .start-9 {
+            grid-row-start: 2;
+        }
+        .start-10 {
+            grid-row-start: 3;
+        }
+        .start-11 {
+            grid-row-start: 4;
+        }
+        .start-12 {
+            grid-row-start: 5;
+        }
+        .start-1 {
+            grid-row-start: 6;
+        }
+        .start-2 {
+            grid-row-start: 7;
+        }
+        .start-3 {
+            grid-row-start: 8;
+        }
+        .start-4 {
+            grid-row-start: 9;
+        }
+        .start-5 {
+            grid-row-start: 10;
+        }
+
+        .end-10 {
+            grid-row-end: 3;
+        }
+        .end-11 {
+            grid-row-end: 4;
+        }
+        .end-12 {
+            grid-row-end: 5;
+        }
+        .end-1 {
+            grid-row-end: 6;
+        }
+        .end-2 {
+            grid-row-end: 7;
+        }
+        .end-3 {
+            grid-row-end: 8;
+        }
+        .end-4 {
+            grid-row-end: 9;
+        }
+        .end-5 {
+            grid-row-end: 10;
+        }
+        .end-6 {
+            grid-row-end: 11;
+        }
+
+
+        .calendar {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+        }
+
+        .time {
+            display: grid;
+            grid-template-rows: repeat(10, 60px);
+        }
+        .day {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .date {
+            background-color: #fff;
+        }
+
+        .monday, .tuesday, .wednesday, .thursday, .friday {
+            background-color: #fff1f8;
+            display: grid;
+            grid-template-rows: repeat(10, 60px);
+        }
+
+        .event {
+            padding: 10px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar">
+        <div class="time">
+            <span class="blank"></span>
+            <span>9AM</span>
+            <span>10AM</span>
+            <span>11AM</span>
+            <span>12PM</span>
+            <span>1PM</span>
+            <span>2PM</span>
+            <span>3PM</span>
+            <span>4PM</span>
+            <span>5PM</span>
+            <span>6PM</span>
+        </div>
+        <div class="day">
+            <div class="monday">
+                <div class="date">9 星期一</div>
+                <div class="primary event start-2 end-5">
+                    <p>Securities Regulation</p>
+                    <p>2 PM - 5 PM</p>
+                </div>
+            </div>
+            <div class="tuesday">
+                <div class="date">10 星期二</div>
+                <div class="error event start-10 end-12">
+                    <p>Corporate Finance</p>
+                    <p>10 AM - 12 PM</p>
+                </div>
+                <div class="warn event start-1 end-4">
+                    <p>Entertainment Law</p>
+                    <p>1PM - 4PM</p>
+                </div>
+            </div>
+            <div class="wednesday">
+                <div class="date">11 星期三</div>
+                <div class="info event start-11 end-12">
+                    <p>Writing Seminar</p>
+                    <p>11 AM - 12 PM</p>
+                </div>
+                <div class="warn event start-2 end-5">
+                    <p>Securities Regulation</p>
+                    <p>2 PM - 5 PM</p>
+                </div>
+            </div>
+            <div class="thursday">
+                <div class="date">12 星期四</div>
+                <div class="error event start-10 end-12">
+                    <p>Corporate Finance</p>
+                    <p>10 AM - 12 PM</p>
+                </div>
+                <div class="warn event start-1 end-4">
+                    <p>Entertainment Law</p>
+                    <p>1PM - 4PM</p>
+                </div>
+            </div>
+            <div class="friday">
+                <div class="date">13 星期五</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
